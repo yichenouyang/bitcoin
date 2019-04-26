@@ -26,12 +26,18 @@
 		span{
 			color:#F27F1B;
 		}
-		p,
+	
 		h1,
-		h2{
-			
+		h2{text-align: left;
+		   font-size: 15px;
+		   margin:auto;
+
 		}
-		h3{
+		p3{
+		   text-align: left;
+		   font-size: 15px;
+		}
+		h3{text-align: center;
 			font-size: 3.4rem;
 			margin: 1.5rem auto;
 			font-weight: 900;
@@ -52,7 +58,6 @@
 		#intro {
 			max-width: 70rem;
 			margin: 5px auto;
-			text-align: center;
 			height: 10px;
 			font-family: 'Open Sans', sans-serif;
 			margin-bottom: 300px;
@@ -60,9 +65,11 @@
 			
 		}
 		.intro__overline {
+			text-align: justify;
 			font-size: 1.4rem;
 		}
 		.intro__hed {
+			text-align: center;
 			font-size: 3.4rem;
 			margin: 1.5rem auto;
 			font-weight: 900;
@@ -70,11 +77,12 @@
 		}
 		
 		#outro {
+			max-width: 70rem;
 			height: 640px;
-			text-align: center;
+			
 			height: 10px;
 			font-family: 'Open Sans', sans-serif;
-	
+			margin: 5px auto;
 			color: #666;
 		}
 		
@@ -111,20 +119,21 @@
 			-webkit-transform: translateY(-50%);
 			transform: translateY(-50%);
 			background-color: #ddd;
-			border: 1px solid #000;
+			opacity: 0.9;
 		}
 		.chart p {
-			text-align: center;
+			text-align: justify;
 			padding: 1rem;
-			position: absolute;
+			position:relative;
 			top: 50%;
 			left: 50%;
-			-moz-transform: translate(-50%, -50%);
+			-moz-transform: translate(-0%, -50%);
 			-webkit-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 			font-size: 1.4rem;
 			color: #666;
 			font-family: 'Open Sans', sans-serif;
+			opacity: 1;
 		}
 		.scroll__text {
 			position: relative;
@@ -135,7 +144,7 @@
 		.step {
 			width: 1px;
 			margin: 2rem auto;
-			border: 1px solid #333;
+			
 		}
 		.step.is-active {
 			opacity: 1;
@@ -175,33 +184,34 @@
 	<div class='scroll__graphic'>
 		<div class='chart' >
 			<p>0</p>
+			<svg id = "rec"></svg>
 		</div>
 	</div>
 	<div class="line">
-    	<svg width="500" height="5000"></svg>
+		<div class = "timeline"></div>
+    	<svg width="900" height="5000"></svg>
   	</div>
 
 	<!--  step/text container  -->
 	<div class='scroll__text'>
 		
 		
-		<div class='step' data-step='1'>
-			<p>STEP 1</p>
+		<div class='step' data-step='1'>		
 		</div>
 		<div class='step' data-step='2'>
-			<p>STEP 2</p>
 		</div>
 		<div class='step' data-step='3'>
-			<p>STEP 3</p>
 		</div>
 		<div class='step' data-step='4'>
-			<p>STEP 4</p>
+			
 		</div>
 		<div class='step' data-step='5'>
-			<p>STEP 4</p>
 		</div>
 		<div class='step' data-step='6'>
-			<p>STEP 4</p>
+		</div>
+		<div class='step' data-step='7'>
+		</div>
+		<div class='step' data-step='8'>
 		</div>
 	</div>
 		
@@ -211,6 +221,9 @@
 	<section id='outro'>
 	<h3>So, What's next?</h3>
 	<p class = 'intro__overline'>Looking back at bitcoins price fluctuation in the last two years, stomach-churning tumbles of 40%, one thing for sure is that the once most popular cryptocurrency is an extremely volatile asset, and highly sensitive to external factors like government regulation or cybersecurity. We expect a long way to go before it can function as a reliable medium of exchange.</p>
+	<h2>Sources</h2>
+	<p3>Bitcoin Market Price. BlockChain. https://www.blockchain.com/charts/market-price<br>History of Bitcoin Price. Wikipedia. https://en.wikipedia.org/wiki/History_of_bitcoin#cite_note-162<br>Bitcoin’s Timeline, Most Historical Events.https://www.crushthestreet.com/articles/digital-currencies/bitcoins-timeline-historical-events<br>5 Big Bitcoin Crashes: What We Learned. http://fortune.com/2017/09/18/bitcoin-crash-history/</p3>
+	
 	</section>
 	
 	<div class='debug'></div>
@@ -221,7 +234,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/scrollama/1.4.1/scrollama.min.js'></script>
 	
 	<script>
-		var charttext=["From January to April, the price rose steadily from $965 to $1316. On May 21, BTC surpassed $2000 for the first time, and from there, continued to quickly gain traction at price.","bbb","ccc","ddd","eee","fff"]
+		var charttext=["From January to April, the price rose steadily from $965 to $1316. On May 21, BTC surpassed $2000 for the first time, and from there, continued to quickly gain traction at price.","On August 1, the Bitcoin network split in an event now known as the Bitcoin Cash hard fork. Although many were expecting this to lead to a crash in BTC’s price, following the split, it fell slightly from $2874 to $2719. It quickly recovered, reaching a new ALT of $3000 on August 6, and surpassing $4000 by mid-August. At the start of September, it was $4710, but its bull runs briefly impeded by the announcement of China’s ICO crackdown on September 4, which resulted in a dip from $4531 to $4308.","From October to the end of the year, it was a case of one ATH replacing another. At the end of October, $6000 was reached for the first time, with $7000 following in early November. On November 20, a new ALT of $8000 was reached, demonstrating a quick recovery from a crash of $5760 just days before.","The rest of the year would go down in history as Bitcoin’s biggest bull run. What caused the bull run is attributed to a number of factors, including greater media attention, an increase in public interest fueled by a fear of missing out (FOMO), greater institutional interest, and the introduction of BTC futures trading. At the start of December, $10,699 was hit, and then the price continued to increase by thousands every couple of days – until it hit its all-time high to date of $19,429 on December 17.","The high price was not sustained, however, with the price dipping in the following days, going back down to $13,311 on December 24, a correction that essentially shaved billions of dollars off BTC’s market capitalization. Ironically, the decline is considered by many, including the Federal Reserve Bank of San Francisco, to have been a consequence of the launch of Bitcoin futures trading. The year was finished on $13,313.","January 8th Coinmarketcap removed prices from South Korean exchanges from its cryptocurrency settlements without warning, which led to a sharp drop in all prices. In addition, the financial authorities of Korea on January 8 began an investigation of services related to cryptocurrencies provided by local banks.","May 24th The justice Department opened a criminal case about whether traders manipulate the price of bitcoins and other digital currencies. The investigation focuses on illegal activities that can affect prices such as spoofing or flooding the market with fake orders to trick other traders into buying or selling.","November 15, 2018, Bitcoin's market capitalization fell below $100 billion for the first time since October 2017 and the price of Bitcoin fell to $5,500"]
 		
 	
 		var container = d3.select('#scroll');
@@ -235,7 +248,8 @@
 		function handleResize() {
 			// 1. update height of step elements
 			var stepHeight = Math.floor(window.innerHeight * 0.75);
-			step.style('height', stepHeight + 'px');
+			step.style('height', stepHeight + 'px')
+				.style('width',"0px")
 			// 2. update width/height of graphic element
 			var bodyWidth = d3.select('body').node().offsetWidth;
 			graphic
@@ -243,10 +257,10 @@
 				.style('height', window.innerHeight + 'px');
 			var chartMargin = 32;
 			var textWidth = text.node().offsetWidth;
-			var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
-			chart
-				.style('width', chartWidth + 'px')
-				.style('height', Math.floor(window.innerHeight / 2) + 'px');
+			var chartWidth = 800;
+			
+			chart.style('width', chartWidth + 'px')
+				.style('height', "300px");
 			// 3. tell scrollama to update new element dimensions
 			scroller.resize();
 		}
@@ -259,6 +273,8 @@
 			})
 			// update graphic based on step
 			chart.select('p').text(charttext[response.index])
+			chart.select()
+			
 		}
 		function handleContainerEnter(response) {
 			// response = { direction }
@@ -305,7 +321,7 @@
 				newdata.points.push({
 				x:100+xScale(d.price),
 				y:150+20*d.id,
-				t:d.time,
+				rof:d.rof
 			})
 			})
 		return newdata 
@@ -314,12 +330,16 @@
 	d3.csv("price.csv").then((price)=>{
 		data = prepareData(price)
 		console.log(data)
-
+	timeline=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb"]			
+		
     var svg = d3.select('svg');
     var distancePath = svg.append('path')
       .attr('fill', 'none')
       .attr('stroke', 'none').node();
-
+	
+	for (var i =0; i<26;i++){
+	svg.append('text').attr('x', 40).attr('y', 330+160*i).style('fill', 'gray').style('font-size', '18px').style('font-weight', 'bold').text(timeline[i])}
+		
     var source;
     var target;
     var gap = 100;
@@ -376,10 +396,12 @@
       source = target;
     });
 
+	
+	
     var path = svg.append('path')
       .attr('d', _.pluck(data.points, 'd').join(' '))
       .attr('fill-opacity', 0)
-      .attr('stroke', '#3FB8AF')
+      .attr('stroke', "#F27F1B")
       .attr('stroke-width', 4)
       .attr('stroke-linecap', 'round')
       .attr('stroke-dasharray', totalDistance)
@@ -387,11 +409,11 @@
     var circle = svg.selectAll('circle')
       .data(data.points).enter().append('circle')
       .attr('fill', '#fff')
-      .attr('stroke', '#3FB8AF')
+      .attr('stroke', function(d){if(d.rof ==1){return "red"}else{return "green"}})
       .attr('stroke-width', 2)
       .attr('cx', function(d) {return d.x})
       .attr('cy', function(d) {return d.y})
-      .attr('r', 4);
+      .attr('r', 5);
 
     window.addEventListener('scroll', _.throttle(windowScroll, 200));
 
