@@ -335,7 +335,21 @@
       .attr('stroke', 'none').node();
 	
 	for (var i =0; i<26;i++){
-	svg.append('text').attr('x', 40).attr('y', 330+160*i).style('fill', 'gray').style('font-size', '18px').style('font-weight', 'bold').text(timeline[i])}
+	svg.append('text').attr('x', 40).attr('y', 330+160*i).style('fill', 'gray').style('font-size', '24px').style('font-weight', 'bold').text(timeline[i])}
+	svg.append('text').attr('x', 150).attr('y', 330).style('fill', 'gray').style('font-size', '24px').text("->Bitcoin Price $960-Jan 01")
+	svg.append('text').attr('x', 150).attr('y', 850).style('fill', 'gray').style('font-size', '24px').text("->Japan and Russia make bitcoin legal currency-April 12")
+	svg.append('text').attr('x', 320).attr('y', 1500).style('fill', 'gray').style('font-size', '24px').text("->Bitcoin splits into Bitcoin and Bitcoin Cash – Aug 5")
+	svg.append('text').attr('x', 310).attr('y', 1590).style('fill', 'gray').style('font-size', '18px').text("->Price dipped in response to China's bitcoin ICO and exchange crackdown-Sep 12")
+	svg.append('text').attr('x', 90).attr('y', 2060).style('fill', 'gray').style('font-size', '16px').text("Price rose 5% in 24 hours, to reach a new all-time high $190k -December 17->")
+	svg.append('text').attr('x', 90).attr('y', 2090).style('fill', 'gray').style('font-size', '16px').text("Price lost one third of its value in 24 hours, dropping below $14,000- Dec 22->")
+	svg.append('text').attr('x', 100).attr('y', 2210).style('fill', 'gray').style('font-size', '16px').text("“Black Tuesday”: Regulatory uncertainty in China and Korea-Jan 16 ->")
+	svg.append('text').attr('x', 30).attr('y', 2480).style('fill', 'gray').style('font-size', '16px').text("Bitcoin's price dropped 50 percent in 16 days, falling below $7,000-Feb 05 ->")
+	svg.append('text').attr('x', 390).attr('y', 3640).style('fill', 'gray').style('font-size', '18px').text("<-$6,300, on the 10 year anniversary of Bitcoin, price holds steady.-Oct 31")
+	svg.append('text').attr('x', 270).attr('y', 3900).style('fill', 'gray').style('font-size', '24px').text("<-Falling below $4,000-November 24")
+	
+	
+		
+		
 		
     var source;
     var target;
@@ -410,7 +424,10 @@
       .attr('stroke-width', 2)
       .attr('cx', function(d) {return d.x})
       .attr('cy', function(d) {return d.y})
-      .attr('r', 5);
+      .attr('r', 5)
+	  .append
+
+	  
 
     window.addEventListener('scroll', _.throttle(windowScroll, 200));
 
